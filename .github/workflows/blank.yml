@@ -1,0 +1,19 @@
+name: Append data data every day at 00:10 '10 0 * * *'
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 * * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v2
+      - name: Append new data
+        run: |-
+          curl \
+            -X GET \
+              $API_ENDPOINT
