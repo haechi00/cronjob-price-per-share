@@ -16,4 +16,4 @@ jobs:
         run: |-
           curl \
             -X GET \
-              $API_ENDPOINT
+              ${{ env.API_ENDPOINT }}
