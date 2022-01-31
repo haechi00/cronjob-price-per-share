@@ -10,7 +10,7 @@ jobs:
   scheduled:
     runs-on: ubuntu-latest
     env:
-      API_CALL: ${{ secrets.API_CALL }}
+      API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
     steps:
       - name: Check out this repo
         uses: actions/checkout@v2
@@ -18,4 +18,4 @@ jobs:
         run: |-
           curl \
             -X GET \
-              $API_CALL
+              $API_ENDPOINT
