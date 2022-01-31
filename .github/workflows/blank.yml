@@ -1,8 +1,6 @@
 name: Append data data every day at 00:10 '10 0 * * *'
 
 on:
-  push:
-  workflow_dispatch:
   schedule:
     - cron: '0/6 * * * *'
 
@@ -12,8 +10,6 @@ jobs:
     env:
       API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
     steps:
-      - name: Check out this repo
-        uses: actions/checkout@v2
       - name: Append new data
         run: |-
           curl \
