@@ -3,6 +3,7 @@ name: Append data data every day at 00:10 '10 0 * * *'
 on:
   schedule:
     - cron: '0 9 * * *'
+    - cron: '0 19 * * *'
 
 jobs:
   scheduled:
