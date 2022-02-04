@@ -1,4 +1,4 @@
-name: Append data data every day at 00:10 '10 0 * * *'
+name: Append data data every day at 10am and 20pm
 
 on:
   schedule:
