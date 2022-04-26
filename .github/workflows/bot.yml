@@ -8,10 +8,10 @@ jobs:
   scheduled:
     runs-on: ubuntu-latest
     env:
-      API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
+      API_ENDPOINT: ${{ secrets.BOT_API_ENDPOINT }}
     steps:
       - name: Append bot data
         run: |-
           curl \
             -X GET \
-              "$API_ENDPOINT"
+              "$BOT_API_ENDPOINT"
