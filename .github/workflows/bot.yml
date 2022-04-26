@@ -1,4 +1,4 @@
-name: Append data data every 10 mins
+name: Get Deposits
 
 on:
   schedule:
