@@ -1,4 +1,4 @@
-name: Get Deposits
+name: Post Deposits
 
 on:
   schedule:
