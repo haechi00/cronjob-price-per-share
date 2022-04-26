@@ -1,0 +1,17 @@
+name: Append data data every day at 10am and 20pm
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    env:
+      API_ENDPOINT: ${{ secrets.API_BOT_ENDPOINT }}
+    steps:
+      - name: Append new data
+        run: |-
+          curl \
+            -X GET \
+              "$API_ENDPOINT"
