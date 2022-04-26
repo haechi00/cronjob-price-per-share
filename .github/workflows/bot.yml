@@ -2,16 +2,16 @@ name: Append data data every 10 mins
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   scheduled:
     runs-on: ubuntu-latest
     env:
-      API_ENDPOINT: ${{ secrets.API_BOT_ENDPOINT }}
+      API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
     steps:
-      - name: Deposit Bot
+      - name: Append bot data
         run: |-
           curl \
             -X GET \
-              "$API_BOT_ENDPOINT"
+              "$API_ENDPOINT"
