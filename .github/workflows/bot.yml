@@ -10,7 +10,7 @@ jobs:
     env:
       API_ENDPOINT: ${{ secrets.API_BOT_ENDPOINT }}
     steps:
-      - name: Append new data
+      - name: Deposit Bot
         run: |-
           curl \
             -X GET \
