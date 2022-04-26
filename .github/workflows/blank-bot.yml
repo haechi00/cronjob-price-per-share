@@ -1,8 +1,8 @@
-name: Append data data every day at 10am and 20pm
+name: Append data data every 10 mins
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   scheduled:
@@ -14,4 +14,4 @@ jobs:
         run: |-
           curl \
             -X GET \
-              "$API_ENDPOINT"
+              "$API_BOT_ENDPOINT"
